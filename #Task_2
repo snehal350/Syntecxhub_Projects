@@ -1,0 +1,20 @@
+import random
+
+num = random.randint(1, 100)
+print("Computer selected a number from 1 to 100")
+
+turns = 0
+
+while True:
+    guess = int(input("Enter the guessed number: "))
+    turns += 1
+
+    if guess == num:
+        print(" You got it right!")
+        break
+    elif guess < num:
+        print("Try a bigger number")  
+    else:
+        print("Try a smaller number")
+
+print("Number of turns =", turns)
